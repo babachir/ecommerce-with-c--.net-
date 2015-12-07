@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- arobaz  ViewBag.Title- --> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> H&M </title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    
+    <div class="div-Nav">
+        <img class="logo" src="../../Content/image/HM.png" />
+        <div id="divPanier">
+            <div class="panier"><i></i><a href="#"> Panier (0)</a></div>
+        </div>
+        <nav>
+            <ul>
+                <a href="#"><li>HOMME</li></a>
+                <a href="#"><li>FEMME</li></a>
+                <a href="#"><li>ENFANT</li></a>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - H&M Application with ASP.NET </p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

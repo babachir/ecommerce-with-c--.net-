@@ -1,0 +1,98 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.div-Nav
+{
+    background-color: white;
+    margin-top: -50px;
+    border-bottom: 1px solid #ddd;
+    height:160px;
+}
+
+.div-Nav ul
+{
+    list-style-type:none;
+    display: block;
+}
+nav
+{
+    height: 40px;
+    width: 433px;
+    margin: auto;
+}
+.div-Nav ul li 
+{
+    background-color: white;
+    text-align: center;
+    width: 120px;
+    display: block;
+    float: left;
+    font-weight: bold;
+}
+.div-Nav ul li:hover
+{
+    border-bottom: 3px solid black ; 
+}
+
+.div-Nav ul a 
+{
+    text-decoration:none;
+    color:black;
+}
+
+.logo
+{
+    vertical-align: middle;
+    width: 70px;
+    margin: auto;
+    display: block;
+}
+
+.panier
+{
+    width:100px;
+    float:right;
+    font-weight:bold;
+}
+
+.panier a 
+{
+    text-decoration:none !important;
+    color:black;
+}
+.panier i 
+{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url(image/briefcase.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    margin-top: -2px;
+    background-position-y: 7px;
+}
+
+#divPanier
+{
+        height: 30px;
+    width: 871px;
+    margin: auto;
+}
+
+
+}
