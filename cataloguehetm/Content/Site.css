@@ -5,8 +5,9 @@
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+
+    width: 1000px;
+    margin: auto;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -21,7 +22,9 @@ textarea {
     background-color: white;
     margin-top: -50px;
     border-bottom: 1px solid #ddd;
-    height:160px;
+    height: 160px;
+    width: 1000px;
+    margin: auto;
 }
 
 .div-Nav ul
@@ -89,7 +92,7 @@ nav
 
 #divPanier
 {
-        height: 30px;
+    height: 30px;
     width: 871px;
     margin: auto;
 }

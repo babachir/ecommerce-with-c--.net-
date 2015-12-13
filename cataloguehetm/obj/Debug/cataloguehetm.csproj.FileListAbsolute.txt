@@ -44,3 +44,7 @@ c:\users\bachir\documents\visual studio 2015\Projects\cataloguehetm\cataloguehet
 c:\users\bachir\documents\visual studio 2015\Projects\cataloguehetm\cataloguehetm\obj\Debug\cataloguehetm.csprojResolveAssemblyReference.cache
 c:\users\bachir\documents\visual studio 2015\Projects\cataloguehetm\cataloguehetm\obj\Debug\cataloguehetm.dll
 c:\users\bachir\documents\visual studio 2015\Projects\cataloguehetm\cataloguehetm\obj\Debug\cataloguehetm.pdb
+C:\Users\Bachir\Documents\Visual Studio 2015\Projects\cataloguehetm\cataloguehetm\bin\EntityFramework.dll
+C:\Users\Bachir\Documents\Visual Studio 2015\Projects\cataloguehetm\cataloguehetm\bin\EntityFramework.SqlServer.dll
+C:\Users\Bachir\Documents\Visual Studio 2015\Projects\cataloguehetm\cataloguehetm\bin\EntityFramework.xml
+C:\Users\Bachir\Documents\Visual Studio 2015\Projects\cataloguehetm\cataloguehetm\bin\EntityFramework.SqlServer.xml
