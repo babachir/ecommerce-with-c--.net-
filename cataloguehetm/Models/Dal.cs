@@ -92,5 +92,44 @@ namespace cataloguehetm.Models
             return null;
 
         }
+
+        public void CreateShop(string address , string city , string zipcode , string country , string numphone, string  fax )
+        {
+            bdd.Shops.Add(new Shop { Address = address, City= city, Zipcode= zipcode, Country= country , Numphone = numphone, Fax = fax});
+            bdd.SaveChanges();
+        }
+        public Shop GetShopById(int id)
+        {
+            Shop Shopreturned = bdd.Shops.FirstOrDefault(shop => shop.Id == id);
+            if (Shopreturned!= null)
+            {
+                return Shopreturned;
+            }
+            return null;
+
+        }
+
+        public void UpdateShop(int id, string address, string city, string zipcode, string country, string numphone, string fax)
+        {
+            Shop shopUpdate = bdd.Shops.FirstOrDefault(shop => shop.Id == id);
+            if (shopUpdate != null)
+            {
+
+                shopUpdate.Address= address ;
+                shopUpdate.City=city ;
+                shopUpdate.Country=country ;
+                shopUpdate.Zipcode=zipcode ;
+                shopUpdate.Numphone=numphone ;
+                shopUpdate.Fax=fax ;
+                bdd.SaveChanges();
+            }
+
+        }
+
+        public void DeleteShop(Shop shop)
+        {
+            bdd.Shops.Remove(shop);
+            bdd.SaveChanges();
+        }
     }
 }

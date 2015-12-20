@@ -1,0 +1,48 @@
+﻿@model cataloguehetm.ViewModels.ShopViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Ajouter un magasin</legend>
+
+        <div>
+            @Html.LabelFor(model => model.shop.Address)
+            @Html.TextBoxFor(model => model.shop.Address)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.shop.City)
+            @Html.TextBoxFor(model => model.shop.City)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.shop.Zipcode)
+            @Html.TextBoxFor(model => model.shop.Zipcode)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.shop.Country)
+            @Html.TextBoxFor(model => model.shop.Country)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.shop.Numphone)
+            @Html.TextBoxFor(model => model.shop.Numphone)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.shop.Fax)
+            @Html.TextBoxFor(model => model.shop.Fax)
+        </div>
+
+        <br />
+        <input type="submit" value="Valider" />
+    </fieldset>
+}
+
+
+</div>
+

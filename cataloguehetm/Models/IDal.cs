@@ -18,6 +18,9 @@ namespace cataloguehetm.Models
         void UpdateAdmin(int Id, string Firstname, string Lastname, string Email, string password);
         Admin Athentification( string email, string password );
         Admin GetAdminByid(int id);
-
+        void CreateShop(string address, string city, string zipcode, string country, string numphone, string fax);
+        void UpdateShop(int id, string address, string city, string zipcode, string country, string numphone, string fax);
+        Shop GetShopById(int id);
+        void DeleteShop(Shop shop);
     }
 }

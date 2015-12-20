@@ -171,6 +171,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
+    <Compile Include="ViewModels\ShopViewModel.cs" />
     <Compile Include="ViewModels\ShopAdminListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +192,8 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\CatalogueAdmin\index.cshtml" />
     <Content Include="Views\ShopAdmin\Lists.cshtml" />
+    <Content Include="Views\ShopAdmin\Add.cshtml" />
+    <Content Include="Views\ShopAdmin\Update.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

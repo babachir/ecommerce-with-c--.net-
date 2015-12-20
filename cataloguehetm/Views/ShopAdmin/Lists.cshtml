@@ -23,14 +23,14 @@
             foreach (var shop in Model.Shops)
             {
                 <tr>
-                    <td>shop.Address</td>
-                    <td>shop.City</td>
-                    <td>shop.Zipcode</td>
-                    <td>shop.Country</td>
-                    <td>shop.Numphone</td>
-                    <td>shop.Fax</td>
-                    <td>@</td>
-                    <td>shop.Fax</td>
+                    <td>@shop.Address</td>
+                    <td>@shop.City</td>
+                    <td>@shop.Zipcode</td>
+                    <td>@shop.Country</td>
+                    <td>@shop.Numphone</td>
+                    <td>@shop.Fax</td>
+                    <td>@Html.ActionLink("Update", "Update", "ShopAdmin", new { id = shop.Id }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "ShopAdmin", new { id = shop.Id }, null)</td>
                 </tr>
 
             }
@@ -38,7 +38,7 @@
 
     </table>
 
-    <a style="text-align:right;" href="/ShopAdmin/add"> Add shop</a>
+    <a style="text-align:right;display: inherit;" href="/ShopAdmin/Add"> Add shop</a>
 
     <style type="text/css">
         table {
