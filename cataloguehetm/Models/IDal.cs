@@ -15,6 +15,9 @@ namespace cataloguehetm.Models
         List<Provider> GetAllProvider();
         List<Shop> GetAllShop();
         void CreateAdmin(string Firstname, string Lastname,string Email, string password);
+        void UpdateAdmin(int Id, string Firstname, string Lastname, string Email, string password);
+        Admin Athentification( string email, string password );
+        Admin GetAdminByid(int id);
 
     }
 }

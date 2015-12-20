@@ -1,0 +1,19 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Index";
+}
+
+
+
+<div id="content">
+    <div style="text-align:center;">
+@Html.ActionLink("Gestion des magasins", "Lists", "ShopAdmin") <br/>
+@Html.ActionLink("Gestion des fournisseurs", "Lists", "ProviderAdmin") <br/>
+@Html.ActionLink("Gestion des catalogues", "Lists", "CatalogueAdmin") <br/>
+@Html.ActionLink("Gestion des articles", "Lists", "ArticleAdmin") <br/>
+
+    </div>
+
+</div>
+

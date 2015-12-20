@@ -1,0 +1,53 @@
+﻿@model cataloguehetm.ViewModels.ShopAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+    <table>
+        <tr>
+            <th>Adresse</th>
+            <th>City</th>
+            <th>ZipCode</th>
+            <th>Country</th>
+            <th>Num tel</th>
+            <th>Fax</th>
+        </tr>
+
+
+        @{
+            foreach (var shop in Model.Shops)
+            {
+                <tr>
+                    <td>shop.Address</td>
+                    <td>shop.City</td>
+                    <td>shop.Zipcode</td>
+                    <td>shop.Country</td>
+                    <td>shop.Numphone</td>
+                    <td>shop.Fax</td>
+                    <td>@</td>
+                    <td>shop.Fax</td>
+                </tr>
+
+            }
+        }
+
+    </table>
+
+    <a style="text-align:right;" href="/ShopAdmin/add"> Add shop</a>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
+</div>
+

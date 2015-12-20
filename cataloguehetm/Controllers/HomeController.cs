@@ -1,16 +1,23 @@
-﻿using System;
+﻿using cataloguehetm.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace cataloguehetm.Controllers
 {
     public class HomeController : Controller
     {
+
         // GET: Home
         public ActionResult Index()
         {
+            IDal dal = new Dal();
+            //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "azerty123");
+            Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
+            ViewData["nom"] = admin.Password;
             return View();
         }
     }

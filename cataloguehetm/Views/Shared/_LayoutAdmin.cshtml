@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<!-- arobaz  ViewBag.Title- --> 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> H&M @ViewBag.Title </title>
+    <link href="~/Content/Admin.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    
+
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+
+</head>
+<body>
+    
+    <div class="div-Nav">
+
+
+        <nav>
+            <ul>
+                <a href="#"><li>Admin</li></a>
+                <a href="/CatalogueAdmin"><li>Catalogue</li></a>
+                <a href="#"><li>Commande</li></a>
+
+
+                
+                
+                <a href="/Login/Deconnexion"><li style="float: right;" >Deconnexion</li></a>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            
+        </footer>
+    </div>
+    <script src="~/Content/jquery.blueberry.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

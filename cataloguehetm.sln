@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cataloguehetm", "cataloguehetm\cataloguehetm.csproj", "{B0BF746C-FE73-440B-8203-C424B3487024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cataloguehetm.test", "cataloguehetm.test\cataloguehetm.test.csproj", "{6B287618-F929-4907-96A8-A6172625BC0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B0BF746C-FE73-440B-8203-C424B3487024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0BF746C-FE73-440B-8203-C424B3487024}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0BF746C-FE73-440B-8203-C424B3487024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B287618-F929-4907-96A8-A6172625BC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B287618-F929-4907-96A8-A6172625BC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B287618-F929-4907-96A8-A6172625BC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B287618-F929-4907-96A8-A6172625BC0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

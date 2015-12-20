@@ -8,6 +8,10 @@ namespace cataloguehetm.Models
 {
     public class BddContext : DbContext
     {
+        public BddContext()
+        {
+            Database.SetInitializer<BddContext>(null);
+        }
         public DbSet<Admin> Admins { get; set; } 
         public DbSet<Article> Articles { get; set; }
         public DbSet<Catalogue> Catalogues { get; set; }

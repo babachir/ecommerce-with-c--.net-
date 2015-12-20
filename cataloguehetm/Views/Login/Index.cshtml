@@ -1,0 +1,57 @@
+﻿@model cataloguehetm.ViewModels.AdminViewModel
+
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Admin</title>
+    <link type="text/css" href="../../Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+    
+     @if(Model.authenticated )
+     {
+         <h3>
+         Vous êtes authentifier autant que @Model.admin.Firstname @Model.admin.Lastname  
+         </h3>
+         @Html.ActionLink("Voulez vous vous déconnectez ?","Deconnexion","Login") 
+
+     }
+     else
+     {
+         <p> Authentification</p>
+         using (Html.BeginForm())
+         { 
+             <div>
+         @Html.LabelFor(model => Model.admin.Email)
+         @Html.TextBoxFor(model => Model.admin.Email)
+
+            </div>
+            <div>
+         @Html.LabelFor(model => Model.admin.Password)
+         @Html.PasswordFor(model => Model.admin.Password)
+
+
+            </div>
+            <input type="submit" value="Se connecter" />
+            <br />
+         }
+
+
+     }
+
+
+
+
+
+</body>
+</html>
+
+
