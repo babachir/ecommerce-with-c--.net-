@@ -12,6 +12,7 @@
         <tr>
             <th>Name</th>
             <th>Year</th>
+            <th>Provider</th>
 
 
         </tr>
@@ -23,7 +24,7 @@
                 <tr>
                     <td>@catalogue.Name</td>
                     <td>@catalogue.Year</td>
-                    <td>@Html.ActionLink("Update", "Update", "CatalogueAdmin", new { id = @catalogue.Id }, null)</td>
+                    <td>@catalogue.Provider.Entreprise</td>
                     <td>@Html.ActionLink("Delete", "Delete", "CatalogueAdmin", new { id = @catalogue.Id }, null)</td>
                 </tr>
 

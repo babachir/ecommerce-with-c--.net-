@@ -74,9 +74,9 @@ namespace cataloguehetm.Controllers
 
         public ActionResult Delete(int id)
         {
-            Provider provider = dal.GetProviderById(id);
-            dal.DeleteProvider(provider);
-            Response.Redirect("/ProviderAdmin/Lists");
+            Catalogue catalogue = dal.GetCatalogueById(id);
+            dal.DeleteCatalogue(catalogue);
+            Response.Redirect("/CatalogueAdmin/Lists");
             return View();
         }
     }
