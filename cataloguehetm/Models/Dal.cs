@@ -131,5 +131,88 @@ namespace cataloguehetm.Models
             bdd.Shops.Remove(shop);
             bdd.SaveChanges();
         }
+
+        public void CreateProvider(string entreprise, string contact, string address, string city, string zipcode, string country, string numphone, string fax)
+        {
+            bdd.Providers.Add(new Provider { Entreprise = entreprise, Contact = contact, Address = address, City= city,
+                Zipcode = zipcode, Country=country, Numphone = numphone ,Fax = fax});
+            bdd.SaveChanges();
+        }
+
+        public void UpdateProvider(int id, string entreprise, string contact, string address, string city, string zipcode, string country, string numphone, string fax)
+        {
+            Provider providerUpdate = bdd.Providers.FirstOrDefault(provider => provider.Id == id);
+            if (providerUpdate != null)
+            {
+                providerUpdate.Entreprise = entreprise;
+                providerUpdate.Contact = contact;
+                providerUpdate.Address = address;
+                providerUpdate.City = city;
+                providerUpdate.Country = country;
+                providerUpdate.Zipcode = zipcode;
+                providerUpdate.Numphone = numphone;
+                providerUpdate.Fax = fax;
+                bdd.SaveChanges();
+            }
+        }
+
+        public Provider GetProviderById(int id)
+        {
+            Provider providerreturned = bdd.Providers.FirstOrDefault(provider => provider.Id == id);
+            if (providerreturned != null)
+            {
+                return providerreturned;
+            }
+            return null;
+        }
+
+        public void DeleteProvider(Provider provider)
+        {
+            bdd.Providers.Remove(provider);
+            bdd.SaveChanges();
+        }
+
+        public void DeleteCatalogue(Catalogue catalogue)
+        {
+            bdd.Catalogues.Remove(catalogue);
+            bdd.SaveChanges();
+        }
+
+        public Catalogue GetCatalogueById(int id)
+        {
+            Catalogue cataloguereturned = bdd.Catalogues.FirstOrDefault(catalogue => catalogue.Id == id);
+            if (cataloguereturned != null)
+            {
+                return cataloguereturned;
+            }
+            return null;
+        }
+
+        public void createCatalogue(string name, string year, string urlimage, Provider provider)
+        {
+            bdd.Catalogues.Add(new Catalogue
+            {
+                Name = name,
+                Year = year,
+                Urlimage = urlimage,
+                Provider = provider
+                               
+
+            });
+            bdd.SaveChanges();
+        }
+
+        public void updateCatalogue(int id, string name, string year, string urlimage, Provider provider)
+        {
+            Catalogue catalogueUpdate = bdd.Catalogues.FirstOrDefault(catalogue => catalogue.Id == id);
+            if (catalogueUpdate != null)
+            {
+                catalogueUpdate.Name = name;
+                catalogueUpdate.Year = year;
+                catalogueUpdate.Urlimage = urlimage;
+                catalogueUpdate.Provider = provider;
+                bdd.SaveChanges();
+            }
+        }
     }
 }

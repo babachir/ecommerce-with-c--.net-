@@ -1,0 +1,41 @@
+﻿@model cataloguehetm.ViewModels.CatalogueViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Add catalogue";
+}
+
+
+
+<div id="content">
+    <form action="/CatalogueAdmin/Add" method="post">
+        <fieldset>
+            <legend>Ajouter un catalogue</legend>
+
+            <div>
+                <label for="catalogue_Name">Name</label>
+                <input data-val="true" data-val-required="Le champ Name est requis." id="catalogue_Name" name="catalogueName" type="text" value="">
+            </div>
+            <div>
+                <label for="catalogue_Urlimage">Urlimage</label>
+                <input data-val="true" data-val-required="Le champ Urlimage est requis." id="catalogue_Urlimage" name="catalogueUrlimage" type="text" value="">
+            </div>
+            <div>
+                <label for="catalogue_Year">Year</label>
+                <input data-val="true" data-val-required="Le champ Year est requis." id="catalogue_Year" name="catalogueYear" type="text" value="">
+            </div>
+            <div>
+                <label for="ProviderId">ProviderId</label>
+                <select data-val="true"  data-val-required="Le champ ProviderId est requis." id="ProviderId" name="ProviderId">
+                    <option value="1">Grand fournisseur d'h&amp;m</option>
+                </select>
+            </div>
+
+
+            <br>
+            <input type="submit" value="Valider">
+        </fieldset>
+    </form>
+
+
+</div>

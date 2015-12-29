@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace cataloguehetm.Controllers
 {
+    [Authorize]
     public class ShopAdminController : Controller
     {
         private Dal dal = new Dal();

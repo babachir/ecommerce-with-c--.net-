@@ -20,7 +20,15 @@ namespace cataloguehetm.Models
         Admin GetAdminByid(int id);
         void CreateShop(string address, string city, string zipcode, string country, string numphone, string fax);
         void UpdateShop(int id, string address, string city, string zipcode, string country, string numphone, string fax);
+        void CreateProvider(string entreprise,string contact,string address, string city, string zipcode, string country, string numphone, string fax);
+        void UpdateProvider(int id, string entreprise, string contact, string address, string city, string zipcode, string country, string numphone, string fax);
         Shop GetShopById(int id);
         void DeleteShop(Shop shop);
+        Provider GetProviderById(int id);
+        void DeleteProvider(Provider provider);
+        void DeleteCatalogue(Catalogue catalogue);
+        Catalogue GetCatalogueById(int id);
+        void createCatalogue(string name, string year, string urlimage, Provider provider);
+        void updateCatalogue(int i, string name, string year, string urlimage, Provider provider);
     }
 }

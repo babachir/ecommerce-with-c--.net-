@@ -1,0 +1,57 @@
+﻿@model cataloguehetm.ViewModels.ProviderAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+    <table>
+        <tr>
+            <th>Entreprise</th>
+            <th>Conctact</th>
+            <th>Adresse</th>
+            <th>City</th>
+            <th>ZipCode</th>
+            <th>Country</th>
+            <th>Num tel</th>
+            <th>Fax</th>
+        </tr>
+
+
+        @{
+            foreach (var provider in Model.Provider)
+            {
+                <tr>
+                    <td>@provider.Entreprise </td>
+                    <td>@provider.Contact</td>
+                    <td>@provider.Address</td>
+                    <td>@provider.City</td>
+                    <td>@provider.Zipcode</td>
+                    <td>@provider.Country</td>
+                    <td>@provider.Numphone</td>
+                    <td>@provider.Fax</td>
+                    <td>@Html.ActionLink("Update", "Update", "ProviderAdmin", new { id = @provider.Id }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "ProviderAdmin", new { id = @provider.Id }, null)</td>
+                </tr>
+
+            }
+        }
+
+    </table>
+
+    <a style="text-align:right;display: inherit;" href="/ProviderAdmin/Add"> Add provider</a>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
+</div>
+

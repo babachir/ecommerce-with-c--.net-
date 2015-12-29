@@ -8,7 +8,7 @@ public class Catalogue
     [Required]
     public string Name { get; set; }
     [Required]
-    public DateTime Year { get; set; }
+    public string Year { get; set; }
     [Required]
     public string Urlimage{ get; set; }
     public virtual List<Avalaible> Avalaibles { get; set; }

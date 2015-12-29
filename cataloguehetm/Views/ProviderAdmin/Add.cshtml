@@ -1,0 +1,57 @@
+﻿@model cataloguehetm.ViewModels.ProviderViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Ajouter un fournisseur</legend>
+
+        <div>
+            @Html.LabelFor(model => model.provider.Entreprise)
+            @Html.TextBoxFor(model => model.provider.Entreprise)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.Contact)
+            @Html.TextBoxFor(model => model.provider.Contact)
+        </div>
+
+        <div>
+            @Html.LabelFor(model => model.provider.Address)
+            @Html.TextBoxFor(model => model.provider.Address)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.City)
+            @Html.TextBoxFor(model => model.provider.City)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.Zipcode)
+            @Html.TextBoxFor(model => model.provider.Zipcode)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.Country)
+            @Html.TextBoxFor(model => model.provider.Country)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.Numphone)
+            @Html.TextBoxFor(model => model.provider.Numphone)
+        </div>
+        <div>
+            @Html.LabelFor(model => model.provider.Fax)
+            @Html.TextBoxFor(model => model.provider.Fax)
+        </div>
+
+        <br />
+        <input type="submit" value="Valider" />
+    </fieldset>
+}
+
+
+</div>
+

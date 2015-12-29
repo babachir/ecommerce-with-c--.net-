@@ -1,6 +1,7 @@
 ﻿using cataloguehetm.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -15,9 +16,9 @@ namespace cataloguehetm.Controllers
         public ActionResult Index()
         {
             IDal dal = new Dal();
-            //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "azerty123");
-            Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
-            ViewData["nom"] = admin.Password;
+            //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
+            //Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
+            //ViewData["nom"] = admin.Password;
             return View();
         }
     }

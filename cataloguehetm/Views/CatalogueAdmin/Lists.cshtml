@@ -1,0 +1,47 @@
+﻿@model cataloguehetm.ViewModels.CatalogueAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Year</th>
+
+
+        </tr>
+
+
+        @{
+            foreach (var catalogue in Model.catalogue)
+            {
+                <tr>
+                    <td>@catalogue.Name</td>
+                    <td>@catalogue.Year</td>
+                    <td>@Html.ActionLink("Update", "Update", "CatalogueAdmin", new { id = @catalogue.Id }, null)</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "CatalogueAdmin", new { id = @catalogue.Id }, null)</td>
+                </tr>
+
+            }
+        }
+
+    </table>
+
+    <a style="text-align:right;display: inherit;" href="/CatalogueAdmin/Add"> Add catalogue</a>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
+</div>
+
