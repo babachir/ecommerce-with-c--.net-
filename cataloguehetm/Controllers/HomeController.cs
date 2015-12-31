@@ -16,7 +16,11 @@ namespace cataloguehetm.Controllers
         public ActionResult Index()
         {
             IDal dal = new Dal();
-            //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
+            //IDatabaseInitializer<BddContext> init = new DropCreateDatabaseAlways<BddContext>();
+            //Database.SetInitializer(init);
+            //init.InitializeDatabase(new BddContext());
+
+          //  dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
             //Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
             //ViewData["nom"] = admin.Password;
             return View();

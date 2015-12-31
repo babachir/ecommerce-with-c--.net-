@@ -30,5 +30,8 @@ namespace cataloguehetm.Models
         Catalogue GetCatalogueById(int id);
         void createCatalogue(string name, string year, string urlimage, Provider provider);
         void updateCatalogue(int i, string name, string year, string urlimage, Provider provider);
+        void createArticle(string name, float priceht, float tva, int qtstock, string type, string urlImage, Catalogue catalogue);
+        void DeleteArticle(Article catalogue);
+        Article GetArticleById(int id);
     }
 }

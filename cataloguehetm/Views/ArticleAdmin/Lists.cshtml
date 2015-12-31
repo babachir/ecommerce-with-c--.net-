@@ -1,0 +1,53 @@
+﻿@model cataloguehetm.ViewModels.ArticleAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Tva</th>
+            <th> Quantité en stock</th>
+            <th> Catalogue</th>
+            
+
+
+        </tr>
+
+
+        @{
+            foreach (var article in Model.article)
+            {
+                <tr>
+                    <td>@article.Name</td>
+                    <td>@article.Priceht</td>
+                    <td>@article.Tva</td>
+                    <td>@article.Qtstock</td>
+                    <td>@article.Catalogue.Name</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "ArticleAdmin", new { id = @article.Id }, null)</td>
+                </tr>
+
+            }
+        }
+
+    </table>
+
+    <a style="text-align:right;display: inherit;" href="/ArticleAdmin/Add"> Add catalogue</a>
+
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
+</div>
+

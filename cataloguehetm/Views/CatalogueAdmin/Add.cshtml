@@ -27,7 +27,13 @@
             <div>
                 <label for="ProviderId">ProviderId</label>
                 <select data-val="true"  data-val-required="Le champ ProviderId est requis." id="ProviderId" name="ProviderId">
-                    <option value="1">Grand fournisseur d'h&amp;m</option>
+                   
+                    @{
+                        foreach (var provider in Model.providers)
+                        { 
+                            <option value="@provider.Id"> @provider.Entreprise  </option>
+                        }
+                    }
                 </select>
             </div>
 

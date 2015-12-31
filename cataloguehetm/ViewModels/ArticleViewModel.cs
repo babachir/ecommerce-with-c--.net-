@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace cataloguehetm.ViewModels
 {
-    public class CatalogueViewModel
+    public class ArticleViewModel
     {
-        public Catalogue catalogue { get; set; }
-        public List<Provider> providers { get; set; }
+        public Article article { get; set; }
+        public List<Catalogue> catalogues { get; set; }
     }
 }

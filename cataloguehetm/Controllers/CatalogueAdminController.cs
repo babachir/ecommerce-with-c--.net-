@@ -29,6 +29,7 @@ namespace cataloguehetm.Controllers
             CatalogueViewModel ModelView = new CatalogueViewModel();
             List<Provider> Allprovider = dal.GetAllProvider();
             IEnumerable<Provider> item = Allprovider;
+            ModelView.providers = Allprovider;
             ViewData["item"] = item;
             if (Request.HttpMethod == "POST")
             {

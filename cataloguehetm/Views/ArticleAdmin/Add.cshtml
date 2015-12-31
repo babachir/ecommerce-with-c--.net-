@@ -1,0 +1,69 @@
+﻿@model cataloguehetm.ViewModels.ArticleViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ViewBag.Title = "Add catalogue";
+}
+
+
+
+<div id="content">
+    <form action="/ArticleAdmin/Add" method="post">
+        <fieldset>
+            <legend>Ajouter un catalogue</legend>
+
+            <div>
+                <label for="catalogue_Name">Name</label>
+                <input data-val="true" data-val-required="Le champ Name est requis." id="aricle_Name" name="aricleName" type="text" value="">
+            </div>
+            <div>
+                <label for="catalogue_Urlimage">Prix hors TVA</label>
+                <input data-val="true" data-val-required="Le champ Urlimage est requis." id="article_Priceht" name="articlePriceht" type="text" value="">
+            </div>
+            <div>
+                <label for="catalogue_Year">TVA</label>
+                <input data-val="true" data-val-required="Le champ  est requis." id="article_Tva" name="articleTva" type="text" value="">
+            </div>
+            <div>
+                <label for="catalogue_Name">Quantité</label>
+                <input data-val="true" data-val-required="Le champ Name est requis." id="article_Qtstock" name="articleQtstock" type="text" value="">
+            </div>
+
+
+            <div>
+                <label for="genre">Type</label>
+                <select data-val="true" data-val-required="Le champ  est requis." id="article_Type" name="articleType">
+
+
+                            <option value="Man"> Man </option>
+                            <option value="Women"> Women </option>
+                            <option value="Kid"> Kid</option>
+   
+                </select>
+            </div>
+            <div>
+                <label for="catalogue_Name">Url Image</label>
+                <input data-val="true" data-val-required="Le champ Name est requis." id="article_Urlimage" name="articleUrlimage" type="text" value="">
+            </div>
+
+            <div>
+                <label for="ProviderId">Catalogue</label>
+                <select data-val="true"  data-val-required="Le champ  est requis." id="Catalogue_Id" name="CatalogueId">
+                   
+                    @{
+                        foreach (var catalogue in Model.catalogues)
+                        { 
+                            <option value="@catalogue.Id"> @catalogue.Name  </option>
+                        }
+                    }
+                </select>
+            </div>
+
+
+            <br>
+            <input type="submit" value="Valider">
+        </fieldset>
+    </form>
+
+
+</div>

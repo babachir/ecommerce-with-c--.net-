@@ -188,19 +188,7 @@ namespace cataloguehetm.Models
             return null;
         }
 
-        public void createCatalogue(string name, string year, string urlimage, Provider provider)
-        {
-            bdd.Catalogues.Add(new Catalogue
-            {
-                Name = name,
-                Year = year,
-                Urlimage = urlimage,
-                Provider = provider
-                               
 
-            });
-            bdd.SaveChanges();
-        }
 
         public void updateCatalogue(int id, string name, string year, string urlimage, Provider provider)
         {
@@ -213,6 +201,54 @@ namespace cataloguehetm.Models
                 catalogueUpdate.Provider = provider;
                 bdd.SaveChanges();
             }
+        }
+
+        public void createArticle(string name, float priceht, float tva, int qtstock,string type, string urlImage , Catalogue catalogue)
+        {
+            bdd.Articles.Add(new Article
+            {
+                Name = name,
+                Priceht = priceht,
+                Tva = tva,
+                Qtstock = qtstock,
+                Type = type,
+                Urlimage = urlImage,
+                Catalogue = catalogue
+
+
+            });
+            bdd.SaveChanges();
+        }
+
+        public void DeleteArticle(Article article)
+        {
+            bdd.Articles.Remove(article);
+            bdd.SaveChanges();
+        }
+
+
+        public void createCatalogue(string name, string year,  string urlimage, Provider provider)
+        {
+            bdd.Catalogues.Add(new Catalogue
+            {
+                Name = name,
+                Year = year,
+                Urlimage = urlimage,
+                Provider = provider
+
+
+            });
+            bdd.SaveChanges();
+        }
+
+        public Article GetArticleById(int id)
+        {
+            Article articlereturned = bdd.Articles.FirstOrDefault(article => article.Id == id);
+            if (articlereturned != null)
+            {
+                return articlereturned;
+            }
+            return null;
         }
     }
 }
