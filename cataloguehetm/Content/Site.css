@@ -97,5 +97,37 @@ nav
     margin: auto;
 }
 
+.divCatalogue
+{
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 19px 0px;
+}
+.headerCatalogue
+{
+    border-bottom: 1px solid black;
+    
+}
+.imgCatalogue img
+{
+        width: 998px;  
+}
+
+
+
+.imgArticle img
+{
+        width: 200px;
+}
+
+.imgArticle
+{
+    display:block;
+    float:left;
+}
+.divArticle
+{
+        border: solid 1px black;
+    height: 300px;
 
 }

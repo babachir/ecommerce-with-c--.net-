@@ -35,7 +35,8 @@ namespace cataloguehetm.Controllers
             {
                 Catalogue Catalogue = dal.GetCatalogueById(Int32.Parse(Request.Form["CatalogueId"]));
 
-                dal.createArticle(Request.Form["aricleName"],
+                dal.createArticle(
+                    Request.Form["aricleName"],
                     float.Parse(Request.Form["articlePriceht"]), 
                     float.Parse(Request.Form["articleTva"]),
                     Int32.Parse(Request.Form["articleQtstock"]),

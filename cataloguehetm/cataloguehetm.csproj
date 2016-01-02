@@ -151,7 +151,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ArticleAdminController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\CatalogueAdminController.cs" />
+    <Compile Include="Controllers\CatalogueController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProviderAdminController.cs" />
@@ -209,6 +211,8 @@
     <Content Include="Views\CatalogueAdmin\Lists.cshtml" />
     <Content Include="Views\ArticleAdmin\Add.cshtml" />
     <Content Include="Views\ArticleAdmin\Lists.cshtml" />
+    <Content Include="Views\Catalogue\index.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

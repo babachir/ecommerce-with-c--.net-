@@ -250,5 +250,15 @@ namespace cataloguehetm.Models
             }
             return null;
         }
+
+        public List<Article> GetArticleByType(string type)
+        {
+            List<Article> articlesreturned = bdd.Articles.Where(article => article.Type == type).ToList();
+            if (articlesreturned != null)
+            {
+                return articlesreturned;
+            }
+            return null;
+        }
     }
 }

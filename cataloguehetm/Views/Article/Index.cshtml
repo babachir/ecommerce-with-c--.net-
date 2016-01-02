@@ -1,0 +1,42 @@
+﻿@model cataloguehetm.ViewModels.ArticleAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+ 
+
+
+        @{
+                float prix = 0 ;
+                foreach (var article in Model.article)
+                {
+                prix = @article.Priceht +((@article.Priceht * @article.Tva)/100);
+                <div class="divArticle">
+                        <div class="imgArticle">
+                        
+                            <img src="@article.Urlimage" /> 
+                        </div>
+                        <div class="descriptionArticle">
+                            <p>
+                            <b>Nom :</b> @article.Name <br/>
+                            <b>Prix :</b> @prix €<br/>
+   
+                            </p>
+                         </div>
+                </div>                
+
+            }
+        }
+
+
+
+   
+
+
+</div>
+

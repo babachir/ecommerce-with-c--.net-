@@ -9,6 +9,7 @@ namespace cataloguehetm.Models
     {
         List<Admin> GetAllAdmin();
         List<Article> GetAllArticle();
+        List<Article> GetArticleByType(string type);
         List<Catalogue> GetAllCatalogue();
         List<Client> GetAllClient();
         List<Commande> GetAllCommande();

@@ -1,0 +1,41 @@
+﻿@model cataloguehetm.ViewModels.CatalogueAdminListViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+   
+    @{
+            foreach (var catalogue in Model.catalogue)
+            {
+              <a href="/Article/index/@((string)ViewData["type"])" style="text-decoration: none;color: black;">
+                   <div class="divCatalogue">
+                        <div class="headerCatalogue">     
+                            <p>
+                            @catalogue.Name
+                            .
+                            @catalogue.Year
+                            </p>
+                        </div>
+                       <div class="imgCatalogue">
+                           <img src="@catalogue.Urlimage" alt="arobas" /> 
+                       </div>
+
+                   </div>
+                    
+               </a>
+
+            }
+        }
+
+ 
+
+
+
+
+</div>
+
