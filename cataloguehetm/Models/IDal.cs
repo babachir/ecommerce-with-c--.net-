@@ -23,6 +23,7 @@ namespace cataloguehetm.Models
         void UpdateShop(int id, string address, string city, string zipcode, string country, string numphone, string fax);
         void CreateProvider(string entreprise,string contact,string address, string city, string zipcode, string country, string numphone, string fax);
         void UpdateProvider(int id, string entreprise, string contact, string address, string city, string zipcode, string country, string numphone, string fax);
+        void CreateCommande(string firstname,string lastname, string email, int qte, string address, string numcarde,string cvv, Article article);
         Shop GetShopById(int id);
         void DeleteShop(Shop shop);
         Provider GetProviderById(int id);

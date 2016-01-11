@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = " valider";
+}
+
+
+<div id="content">
+    <form action="/panier/valider" method="post">
+        <div>
+            <label for="catalogue_Year"> Nom</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="firstname" type="text" value="">
+
+        </div>
+        <div>
+            <label for="catalogue_Year">Prénom</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="lastname" type="text" value="">
+
+        </div>
+        <div>
+            <label for="catalogue_Year">Email</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="email" type="text" value="">
+
+        </div>
+        <div>
+            <label for="catalogue_Year">Adresse</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="address" type="text" value="">
+
+        </div>
+        <div>
+            <label for="catalogue_Year">numéro de carte</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="numcarte" type="text" value="">
+
+        </div>
+        <div>
+            <label for="catalogue_Year">code de validation</label>
+            <input data-val="true" data-val-required="Le champ Year est requis." id="" name="cvv" type="text" value="">
+
+        </div>
+
+
+
+    <br/>
+<input type="submit" value="Valider">
+        
+    </form>
+
+</div>

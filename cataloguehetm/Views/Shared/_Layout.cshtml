@@ -24,8 +24,17 @@
     <div class="div-Nav">
         <img class="logo" src="../../Content/image/HM.png" />
         <div id="divPanier">
-            <div class="panier"><i></i><a href="#"> Panier (0)</a></div>
-        </div>
+
+            @{
+                int nbrArticle = 0;
+                if (Session["nbrArticle"] != null)
+                {
+
+                    nbrArticle = (int)Session["nbrArticle"];
+                }
+                }
+                <div class="panier"><i></i><a href="/panier"> Panier (@nbrArticle)</a></div>
+</div>
         <nav>
             <ul>
                 <a href="/Catalogue/index/man"><li>HOMME</li></a>

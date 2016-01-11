@@ -1,0 +1,56 @@
+﻿@model cataloguehetm.ViewModels.PanierViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Lists";
+}
+
+
+
+<div id="content">
+ 
+
+
+        @{
+            float prix = 0 ;
+            if (Model.articleP != null)
+            {
+                foreach (var article in Model.articleP)
+                {
+                    prix = @article.nbr * (@article.article.Priceht + ((@article.article.Priceht * @article.article.Tva) / 100));
+                <div class="divArticle">
+                        <div class="imgArticle">
+                        
+                            <img src="@article.article.Urlimage" /> 
+                        </div>
+                        <div class="descriptionArticle">
+                            <p>
+                            <b>Nom :</b> @article.article.Name <br/>
+                            <b>Quantité :</b> @article.nbr <br />
+                            <b>Prix total :</b> @prix €<br/>
+                                <div class="bt_aj">
+                                
+                                </div>
+                            </p>
+                         </div>
+                </div>
+
+                }
+
+                <div style="display: block;height: 39px;margin-top: 47px;">
+                    <a href="/panier/vider" class="bouton_ajouter"> vider panier </a>
+                </div>
+                <div style="display: block;height: 39px;margin-top: 47px;">
+                    <a href="/panier/valider" class="bouton_ajouter"> Commander</a>
+                </div>
+            }
+
+
+        }
+
+
+
+   
+
+</div>
+

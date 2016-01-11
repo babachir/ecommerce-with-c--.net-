@@ -260,5 +260,23 @@ namespace cataloguehetm.Models
             }
             return null;
         }
+
+        public void CreateCommande(string firstname, string lastname, string email, int qte, string address, string numcarde, string cvv, Article article)
+        {
+            bdd.Commandes.Add(new Commande
+            {
+                Firstname = firstname,
+                Lastname = lastname,
+                Email = email,
+                Quantity = qte,
+                Address = address,
+                Numcard = numcarde,
+                Cvv = cvv,
+                Article = article
+
+            });
+            bdd.SaveChanges();
+
+        }
     }
 }

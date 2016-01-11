@@ -1,4 +1,5 @@
 ﻿using cataloguehetm.Models;
+using cataloguehetm.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -16,11 +17,19 @@ namespace cataloguehetm.Controllers
         public ActionResult Index()
         {
             IDal dal = new Dal();
+
+                if (Session["arrayPanier"]==null)
+                {
+                    List<ArticlePanier> idPanier = new List<ArticlePanier>();
+                    Session["arrayPanier"] = idPanier;
+                }
+
+
             //IDatabaseInitializer<BddContext> init = new DropCreateDatabaseAlways<BddContext>();
             //Database.SetInitializer(init);
             //init.InitializeDatabase(new BddContext());
 
-          //  dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
+              //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
             //Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
             //ViewData["nom"] = admin.Password;
             return View();
