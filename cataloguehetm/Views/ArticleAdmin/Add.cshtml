@@ -35,28 +35,15 @@
                 <select data-val="true" data-val-required="Le champ  est requis." id="article_Type" name="articleType">
 
 
-                            <option value="Man"> Man </option>
-                            <option value="Women"> Women </option>
-                            <option value="Kid"> Kid</option>
+                            <option value="pc"> PC/Hardware </option>
+                            <option value="console">Console </option>
+                            <option value="Kid">game</option>
    
                 </select>
             </div>
             <div>
                 <label for="catalogue_Name">Url Image</label>
                 <input data-val="true" data-val-required="Le champ Name est requis." id="article_Urlimage" name="articleUrlimage" type="text" value="">
-            </div>
-
-            <div>
-                <label for="ProviderId">Catalogue</label>
-                <select data-val="true"  data-val-required="Le champ  est requis." id="Catalogue_Id" name="CatalogueId">
-                   
-                    @{
-                        foreach (var catalogue in Model.catalogues)
-                        { 
-                            <option value="@catalogue.Id"> @catalogue.Name  </option>
-                        }
-                    }
-                </select>
             </div>
 
 

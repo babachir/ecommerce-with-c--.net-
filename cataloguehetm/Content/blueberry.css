@@ -58,10 +58,10 @@
 }
 .blueberry .pager li a span {
 	overflow: hidden;
-	background: #c0c0c0;
+	background: #e6f7c9;;
 	text-indent: -9999px;
 -webkit-border-radius: 2px;
    -moz-border-radius: 2px;
 	border-radius: 2px;
 }
-.blueberry .pager li.active a span { background: #404040; }
+.blueberry .pager li.active a span { background: #76b900; }

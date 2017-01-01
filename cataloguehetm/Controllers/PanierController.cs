@@ -122,5 +122,12 @@ namespace cataloguehetm.Controllers
             
         }
 
+        public ActionResult TestPVue()
+        {
+            
+            return PartialView();
+
+        }
+
     }
 }

@@ -33,7 +33,7 @@ namespace cataloguehetm.Controllers
             ViewData["item"] = item;
             if (Request.HttpMethod == "POST")
             {
-                Catalogue Catalogue = dal.GetCatalogueById(Int32.Parse(Request.Form["CatalogueId"]));
+                //Catalogue Catalogue = dal.GetCatalogueById(Int32.Parse(Request.Form["CatalogueId"]));
 
                 dal.createArticle(
                     Request.Form["aricleName"],
@@ -42,7 +42,7 @@ namespace cataloguehetm.Controllers
                     Int32.Parse(Request.Form["articleQtstock"]),
                     Request.Form["articleType"],
                     Request.Form["articleUrlimage"],
-                    Catalogue
+                    null
                     );
                 Response.Redirect("/ArticleAdmin/Lists");
             }
