@@ -133,10 +133,9 @@ nav
 }
 .divArticle
 {
-        border: solid 1px #0fb90a;
-    height: 300px;
+    border: solid 1px #0fb90a;
+    min-height:300px;
     margin-top: 18px;
-
 }
 .bouton_ajouter
 {

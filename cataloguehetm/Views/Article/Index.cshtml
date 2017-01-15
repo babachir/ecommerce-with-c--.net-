@@ -29,6 +29,13 @@
                                 <a href="/panier/formAdd/@article.Id" class="bouton_ajouter"> ajouter au panier </a>
                                 </div>
                             </p>
+                            @if (!string.IsNullOrEmpty(article.CodeVideo))
+                            {
+                            <div class="article_Video">
+                                <iframe width="854" height="480" src="https://www.youtube.com/embed/@article.CodeVideo" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            }
+                            @article.poids;
                          </div>
                 </div>                
 

@@ -44,6 +44,7 @@ namespace cataloguehetm.Controllers
             ViewData["id"] = id;
             if (Request.HttpMethod == "POST")
             {
+                dal.incrementePoids(id);
                 Response.Redirect("/panier/add/"+id+"/"+ Request.Form["qte"]);
             }
 
@@ -52,21 +53,13 @@ namespace cataloguehetm.Controllers
 
         public ActionResult add(int id,int qte)
         {
-
-
-
-      
             List<ArticlePanier> ArticleInPanier = new List<ArticlePanier>();
             if (Session["listQtePanier"] == null)
             {
-
-  
                 Session["listQtePanier"] = ArticleInPanier;
-
             }
             if (Session["nbrArticle"] == null)
             {
-
                 Session["nbrArticle"] = qte;
             }
             else

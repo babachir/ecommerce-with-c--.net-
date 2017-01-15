@@ -29,10 +29,11 @@ namespace cataloguehetm.Controllers
             //Database.SetInitializer(init);
             //init.InitializeDatabase(new BddContext());
 
-              //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
-            //Admin admin = dal.Athentification("ba.bachir@hotmail.fr","azerty123");
-            //ViewData["nom"] = admin.Password;
-            return View();
+            //dal.CreateAdmin("bachir", "boumessaoud", "ba.bachir@hotmail.fr", "asbk1992");
+            //Admin admin = dal.Athentification("ba.bachir@hotmail.fr", "azerty123");
+            ArticleAdminListViewModel ViewModel = new ArticleAdminListViewModel();
+            ViewModel.article = dal.GetBestArticle();
+            return View(ViewModel);
         }
     }
 }

@@ -63,9 +63,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cataloguehetm\cataloguehetm.csproj">
+    <ProjectReference Include="..\cataloguehetm\cataloguehgame.csproj">
       <Project>{b0bf746c-fe73-440b-8203-c424b3487024}</Project>
-      <Name>cataloguehetm</Name>
+      <Name>cataloguehgame</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

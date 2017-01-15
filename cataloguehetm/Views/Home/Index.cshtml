@@ -1,4 +1,4 @@
-﻿
+﻿@model cataloguehetm.ViewModels.ArticleAdminListViewModel
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Index";
@@ -6,8 +6,6 @@
 
 
 <div id="content">
-
-    <!-- blueberry -->
 
     <div class="blueberry">
         <ul class="slides">
@@ -17,8 +15,51 @@
             <li><img src="http://www.lejournaldunumerique.com/wp-content/uploads/2015/02/MSI-GTX-960-GTX-970-GAMING-100-ME-02.jpg" /></li>
         </ul>
     </div>
+    <table style="display:block; margin:auto; ">
+        <tr>
+            @foreach (var article in Model.article)
+            {
+            <td>
+                <img width="300" height="300"  src="@article.Urlimage" /> <br/>
+                <h3>@article.Name</h3>
+            </td>
+            }
+        </tr>
+    </table>
 
-    <!-- blueberry -->
+    <div id="feed-actus"></div>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      // Mettez l'URL de votre flux RSS
+      var feed = new google.feeds.Feed("http://www.reeducation-perinee.org/blog/category/sante/feed/");
+      // Ici nous n'affichons que les deux premiers articles du flux RSS
+      feed.setNumEntries(2);
+
+      feed.load(function(result) {
+        if (!result.error) {
+          // Remplacer au besoin le nom de l'élément "feed-actus" par celui que vous utilisez
+          var container = document.getElementById("feed-actus");
+          var rssoutput="";
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            // Pour chaque article du flux RSS, nous affichons un lien avec la date en italique
+            rssoutput+="<a href='" + entry.link + "'>" + entry.title + "</a> <i>(" + new Date(entry.publishedDate).toLocaleDateString() + ")<i/>";
+
+          }
+          container.innerHTML=rssoutput;
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+    <!-- start feedwind code -->
+    <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="5675/"></script> <!-- end feedwind code -->
 
 </div>
 

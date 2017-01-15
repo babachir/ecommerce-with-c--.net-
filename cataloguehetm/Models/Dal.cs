@@ -203,7 +203,7 @@ namespace cataloguehetm.Models
             }
         }
 
-        public void createArticle(string name, float priceht, float tva, int qtstock,string type, string urlImage , Catalogue catalogue)
+        public void createArticle(string name, float priceht, float tva, int qtstock,string type, string urlImage, string codeVideo , Catalogue catalogue)
         {
             bdd.Articles.Add(new Article
             {
@@ -213,9 +213,9 @@ namespace cataloguehetm.Models
                 Qtstock = qtstock,
                 Type = type,
                 Urlimage = urlImage,
-                Catalogue = catalogue
-
-
+                Catalogue = catalogue,
+                CodeVideo = codeVideo,
+                poids =  0
             });
             bdd.SaveChanges();
         }
@@ -225,7 +225,15 @@ namespace cataloguehetm.Models
             bdd.Articles.Remove(article);
             bdd.SaveChanges();
         }
-
+        public void incrementePoids(int Id )
+        {
+            Article article = bdd.Articles.FirstOrDefault(a => a.Id == Id);
+            if (article != null)
+            {
+                article.poids += 1;
+                bdd.SaveChanges();
+            }
+        }
 
         public void createCatalogue(string name, string year,  string urlimage, Provider provider)
         {
@@ -254,6 +262,16 @@ namespace cataloguehetm.Models
         public List<Article> GetArticleByType(string type)
         {
             List<Article> articlesreturned = bdd.Articles.Where(article => article.Type == type).ToList();
+            if (articlesreturned != null)
+            {
+                return articlesreturned;
+            }
+            return null;
+        }
+
+        public List<Article> GetBestArticle()
+        {
+            List<Article> articlesreturned = bdd.Articles.OrderByDescending(a => a.poids).Take(3).ToList();
             if (articlesreturned != null)
             {
                 return articlesreturned;

@@ -16,6 +16,8 @@ public class Article
     public string Type { get; set; }
   
     public string Urlimage { get; set; }
+    public string CodeVideo { get; set; }
+    public int poids { get; set; }
     public virtual List<Conserned> Conserneds { get; set; }
     public virtual Catalogue Catalogue { get; set; }
 }

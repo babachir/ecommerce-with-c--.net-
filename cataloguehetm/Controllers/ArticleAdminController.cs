@@ -24,6 +24,7 @@ namespace cataloguehetm.Controllers
             ViewModel.article = dal.GetAllArticle();
             return View(ViewModel);
         }
+
         public ActionResult Add()
         {
             ArticleViewModel ModelView = new ArticleViewModel();
@@ -33,8 +34,9 @@ namespace cataloguehetm.Controllers
             ViewData["item"] = item;
             if (Request.HttpMethod == "POST")
             {
-                //Catalogue Catalogue = dal.GetCatalogueById(Int32.Parse(Request.Form["CatalogueId"]));
 
+                //Catalogue Catalogue = dal.GetCatalogueById(Int32.Parse(Request.Form["CatalogueId"]));
+                string codevideo = Request.Form["articleCodeVideo"].ToString();
                 dal.createArticle(
                     Request.Form["aricleName"],
                     float.Parse(Request.Form["articlePriceht"]), 
@@ -42,6 +44,7 @@ namespace cataloguehetm.Controllers
                     Int32.Parse(Request.Form["articleQtstock"]),
                     Request.Form["articleType"],
                     Request.Form["articleUrlimage"],
+                    Request.Form["articleCodeVideo"],
                     null
                     );
                 Response.Redirect("/ArticleAdmin/Lists");
